@@ -1,0 +1,11 @@
+# For use by Makefile.
+# See also https://github.com/johnkerl/scripts/blob/master/fundam/yamm
+
+:define=UNIX
+
+:builder=.c=gcc -g # -O3
+:linker=gcc
+:install_dir=$(HOME)/bin
+
+ff2mathlib.c
+ff2mathtest.c
