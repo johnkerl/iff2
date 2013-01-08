@@ -43,7 +43,7 @@ unsigned ff2mul(unsigned a, unsigned b, unsigned r)
 			continue;
 
 		// Now multiply by the power of x on the current term
-		// of b, reducing mod r en rprod.
+		// of b, reducing mod r en route.
 		temp = a;
 		for (power = 1; power <= i; power++) {
 			temp <<= 1;
