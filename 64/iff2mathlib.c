@@ -31,10 +31,10 @@ static unsigned long long f2polydeg(unsigned long long b)
 unsigned long long iff2mul(unsigned long long a, unsigned long long b, unsigned long long r, int degr)
 {
 	int degb = f2polydeg(b);
-	unsigned long long bit_before_degr = 1 << (degr-1);
+	unsigned long long bit_before_degr = ((unsigned long long)1) << (degr-1);
 	unsigned long long prod = 0;
 	unsigned long long temp;
-	int i, power;
+	long long i, power;
 
 	for (i = 0; i <= degb; i++) {
 		// Test if this bit position is set.
@@ -78,7 +78,7 @@ unsigned long long iff2power(unsigned long long  a, unsigned long long power, un
 
 unsigned long long iff2recip(unsigned long long b, unsigned long long r, int degr)
 {
-	unsigned long long pn2 = (degr == 32) ? -2 : (1 << degr) - 2;
+	unsigned long long pn2 = (degr == 64) ? -2 : (1 << degr) - 2;
 	return iff2power(b, pn2, r, degr);
 }
 
