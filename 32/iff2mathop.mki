@@ -5,6 +5,7 @@
 
 :builder=.c=gcc -g # -O3
 :linker=gcc
+:object_dir=build/iff2mathop
 :install_dir=$(HOME)/bin
 
 iff2mathlib.c

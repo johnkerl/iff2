@@ -5,6 +5,7 @@
 
 :builder=.c=gcc -g # -O3
 :linker=gcc
+:object_dir=build/ff2mathtest
 :install_dir=$(HOME)/bin
 
 ff2mathlib.c
